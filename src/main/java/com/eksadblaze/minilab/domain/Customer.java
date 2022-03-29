@@ -14,9 +14,9 @@ public class Customer {
     @Column(name = "customer_name", length = 255, nullable = false)
     private String customerName;
 
-//    @ManyToOne
-//    @JoinColumn(name = "dealer_code")
-//    private Dealer dealer;
+    @ManyToOne
+    @JoinColumn(name = "dealer_code")
+    private Dealer dealer;
 
     @Column(name = "customer_gender", length = 4, nullable = false)
     private String customerGender;
@@ -39,9 +39,9 @@ public class Customer {
     @Column(name = "customer_hp_number", length = 50)
     private String customerHpNumber;
 
-//    @ManyToOne
-//    @JoinColumn(name = "sales_id")
-//    private Sales sales;
+    @ManyToOne
+    @JoinColumn(name = "sales_id")
+    private Sales sales;
 
     @Column(name = "customer_status", length = 10)
     private String customerStatus;
@@ -62,13 +62,13 @@ public class Customer {
         this.customerName = customerName;
     }
 
-//    public Dealer getDealer() {
-//        return dealer;
-//    }
-//
-//    public void setDealer(Dealer dealer) {
-//        this.dealer = dealer;
-//    }
+    public Dealer getDealer() {
+        return dealer;
+    }
+
+    public void setDealer(Dealer dealer) {
+        this.dealer = dealer;
+    }
 
     public String getCustomerGender() {
         return customerGender;
@@ -126,13 +126,13 @@ public class Customer {
         this.customerHpNumber = customerHpNumber;
     }
 
-//    public Sales getSales() {
-//        return sales;
-//    }
-//
-//    public void setSales(Sales sales) {
-//        this.sales = sales;
-//    }
+    public Sales getSales() {
+        return sales;
+    }
+
+    public void setSales(Sales sales) {
+        this.sales = sales;
+    }
 
     public String getCustomerStatus() {
         return customerStatus;

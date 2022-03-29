@@ -8,7 +8,7 @@ public class DtoRespon {
     private String status;
     private String code;
     private String message;
-    private Map<String, Object> data;
+    Map<String, Object> data;
 
     public String getStatus() {
         return status;
