@@ -24,7 +24,7 @@ public class CustomerController {
         String customerId = request.get("customerId").toString();
         String customerName = request.get("customerName").toString();
         String dealerId = request.get("dealerId").toString();
-        String customerGender = request.get("dealerId").toString();
+        String customerGender = request.get("customerGender").toString();
         String customerNik = request.get("customerNik").toString();
         String customerEmail = request.get("customerEmail").toString();
         String customerAddress = request.get("customerAddress").toString();
