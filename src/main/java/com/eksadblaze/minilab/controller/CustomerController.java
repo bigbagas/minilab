@@ -27,21 +27,29 @@ public class CustomerController {
 
         String customerId = request.get("customerId").toString();
         String customerName = request.get("customerName").toString();
-        String dealerId = request.get("dealerId").toString();
+        String dealerCode = request.get("dealerId").toString();
         String customerGender = request.get("customerGender").toString();
         String customerNik = request.get("customerNik").toString();
         String customerEmail = request.get("customerEmail").toString();
         String customerAddress = request.get("customerAddress").toString();
+        String noHp = request.get("customerHpNumber").toString();
+        String noTelp = request.get("customerTelpNumber").toString();
+        String customerKk = request.get("customerKk").toString();
 
-        System.out.println(customerId);
-        System.out.println(customerName);
         ret.put("customerId", customerId);
         ret.put("customerName", customerName);
-        ret.put("dealerId", dealerId);
+        ret.put("dealerId", dealerCode);
         ret.put("customerGender", customerGender);
         ret.put("customerNik", customerNik);
+        ret.put("customerKk", customerKk);
         ret.put("customerEmail", customerEmail);
         ret.put("customerAddress", customerAddress);
+
+
+        int insertCustomer = customerService.insertCustomer(
+                customerId,customerAddress,customerEmail,customerGender,
+                noHp,customerKk,customerName,customerNik,dealerCode,noTelp
+        );
 
         DtoRespon dtoRespon = new DtoRespon();
 
@@ -53,4 +61,5 @@ public class CustomerController {
         return new ResponseEntity<>(dtoRespon, HttpStatus.OK);
 
     }
+
 }
