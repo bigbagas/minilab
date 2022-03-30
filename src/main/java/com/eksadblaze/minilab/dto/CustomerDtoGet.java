@@ -1,7 +1,6 @@
 package com.eksadblaze.minilab.dto;
 
-public class CustomerRequestDto {
-
+public class CustomerDtoGet {
     private String customerId;
     private String customerName;
     private String dealerId;
@@ -10,10 +9,6 @@ public class CustomerRequestDto {
     private String customerKk;
     private String customerEmail;
     private String customerAddress;
-    private String customerTelp;
-    private String customerHp;
-    private String salesId;
-    private String customerStatus;
 
     public String getCustomerId() {
         return customerId;
@@ -77,37 +72,5 @@ public class CustomerRequestDto {
 
     public void setCustomerAddress(String customerAddress) {
         this.customerAddress = customerAddress;
-    }
-
-    public String getCustomerTelp() {
-        return customerTelp;
-    }
-
-    public void setCustomerTelp(String customerTelp) {
-        this.customerTelp = customerTelp;
-    }
-
-    public String getCustomerHp() {
-        return customerHp;
-    }
-
-    public void setCustomerHp(String customerHp) {
-        this.customerHp = customerHp;
-    }
-
-    public String getSalesId() {
-        return salesId;
-    }
-
-    public void setSalesId(String salesId) {
-        this.salesId = salesId;
-    }
-
-    public String getCustomerStatus() {
-        return customerStatus;
-    }
-
-    public void setCustomerStatus(String customerStatus) {
-        this.customerStatus = customerStatus;
     }
 }
