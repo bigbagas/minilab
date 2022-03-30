@@ -1,16 +1,11 @@
 package com.eksadblaze.minilab.dto;
 
-import com.eksadblaze.minilab.domain.Customer;
-
-import java.util.List;
-import java.util.Map;
-
-public class DtoRespon {
-
+public class DtoCustomerListAll {
     private String status;
     private String code;
     private String message;
     Object data;
+    private int dataOfRecord;
 
     public String getStatus() {
         return status;
@@ -42,5 +37,13 @@ public class DtoRespon {
 
     public void setData(Object data) {
         this.data = data;
+    }
+
+    public int getDataOfRecord() {
+        return dataOfRecord;
+    }
+
+    public void setDataOfRecord(int dataOfRecord) {
+        this.dataOfRecord = dataOfRecord;
     }
 }
